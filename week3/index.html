@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <header>
+      <h1>DOM Manipulation Practice</h1>
+    </header>
+    <nav>
+      <a href="#0.0">0 - How to use this document</a>
+      <a href="#1.0">1 - Node Attributes</a>
+      <a href="#2.0">2 - DOM Navigation</a>
+      <a href="#3.0">3 - DOM Manipulation</a>
+    </nav>
+    <section id="0.0">
+      <h2><a href="#0.0">Part 0: Using this document</a></h2>
+      <article id="0.1">
+        <h3>0.1 - Introduction</h3>
+        <p>
+          In this activity, we will be making modifications to the DOM! However,
+          in order to do so in a way that allows you to save your progress and
+          resetting if you messed something up, we will type our code directly
+          into the HTML page within script tags. We highly recommend you use
+          <a href="https://code.visualstudio.com/">VS Code's</a>
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+          ></a
+          >Live Server extension to view this document in the browser and
+          immediately see any updates you make to it reflect into the HTML page.
+        </p>
+        <p>
+          Everything you do for this activity will require editing only the
+          javascript inside of script tags.
+          <strong style="color: red"
+            >Do not edit anything outside of script tags!</strong
+          >
+        </p>
+      </article>
+      <article id="0.2">
+        <h3>0.2 - Testing Edits</h3>
+
+        <p>
+          Let's test your setup! Edit the below code where the javascript
+          comment tells you to to add your name, and see if it reflects below:
+        </p>
+        <p id="0.2-act"></p>
+        <script>
+          const NAME = ""; // Put your name here
+          document.getElementById("0.2-act").textContent = "My name is " + NAME;
+        </script>
+      </article>
+
+      <article id="0.3">
+        <h3>0.3 - JavaScript Console</h3>
+
+        <p>
+          A huge part of debugging will be looking at the Javascript Browser
+          Console. This is where any prints are shown and where errors appear.
+          Look at the console now to see if you can view the element containing
+          your name. Expand it, and find the "textContent" property!
+        </p>
+        <script>
+          console.log(document.getElementById("0.2-act"));
+        </script>
+      </article>
+    </section>
+    <section id="1.0">
+      <h2><a href="#1.0">Part 1: Node Attributes</a></h2>
+      <article id="1.1">
+        <h3><a href="#1.1">1.1 - Introduction</a></h3>
+        <p>
+          In order to get started with DOM manipulation, we need to first
+          understand how to actually read elements in the DOM! In javascript,
+          HTML is represented as objects (hence the "Document *Object* Model",
+          or DOM), with various javascript properties and functions, and is the
+          basis of all DOM Manipulation.
+        </p>
+      </article>
+      <article>
+        <h3>1.2 - Node Information</h3>
+        <p>
+          Let's get started by viewing a node! Below in the javascript, we have
+          a list of nodes. For each node, display its name, type, value, text
+          content, and attributes. You can use the provided display() function
+          to display some data.
+        </p>
+        <p>
+          Hint: Iterating through attributes cannot be done like a normal array
+          easily; instead, use a
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes#enumerating_elements_attributes"
+            >for...of loop.</a
+          >
+        </p>
+        <article id="1.2-act">
+          <p>This is some paragraph text</p>
+          <h5>This is a header</h5>
+          <a href="https://acmcyber.com">Link to acmcyber.com</a>
+          <img
+            src="https://www.acmcyber.com/_next/static/media/cyber-logo.bdd96687.svg"
+            alt="ACM Cyber's logo"
+            height="50"
+          />
+          <script>
+            document.getElementById("1.2-act").style.backgroundColor =
+              "lightgray"; // Script code here
+          </script>
+        </article>
+        <h3>Output</h3>
+        <!-- prettier-ignore -->
+        <pre id="1.2-out" style="background-color: lightgray;">
+</pre>
+        <script>
+          function display(content) {
+            document.getElementById("1.2-out").textContent +=
+              content.toString() + "\n";
+          }
+          elements = document.getElementById("1.2-act").childNodes;
+          // Your code here
+          display("Hello, world!");
+        </script>
+      </article>
+    </section>
+  </body>
+</html>
