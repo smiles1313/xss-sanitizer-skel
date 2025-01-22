@@ -1,0 +1,88 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #0056b3;
+    color: white;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* Navigation bar styling */
+  nav {
+    background-color: #e3f2fd;
+    padding: 10px;
+  }
+  
+  nav ol li {
+    margin: 5px 0;
+  }
+  
+  nav ol li a {
+    text-decoration: none;
+    color: #0056b3;
+  }
+  
+  nav ol li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section and article styling */
+  section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    color: #0056b3;
+    border-bottom: 2px solid #e3f2fd;
+    padding-bottom: 5px;
+  }
+  
+  /* Article styling */
+  article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f1f8ff;
+    border-left: 4px solid #0056b3;
+    border-radius: 5px;
+  }
+  
+  article h3 {
+    color: #0056b3;
+  }
+  
+  article p {
+    margin: 10px 0;
+  }
+  
+  /* Styling for highlighted code-related parts */
+  code, pre {
+    background-color: #e8f5e9;
+    padding: 5px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0056b3;
+    color: white;
+    font-size: 0.9em;
+  }
+  
+
