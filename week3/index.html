@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>DOM Manipulation</title>
   </head>
   <body>
@@ -13,18 +13,11 @@
     </header>
     <nav>
       <ol start="0">
-        <li>        <a href="#0.0">How to use this document</a>
-        </li>
-        <li>        <a href="#1.0">Node Attributes</a>
-        </li>
-        <li>        <a href="#2.0">DOM Navigation</a>
-        </li>
-        <li>        <a href="#3.0">DOM Manipulation</a>
-        </li>
-        
-        
+        <li><a href="#0.0">How to use this document</a></li>
+        <li><a href="#1.0">Node Attributes</a></li>
+        <li><a href="#2.0">DOM Navigation</a></li>
+        <li><a href="#3.0">DOM Manipulation</a></li>
       </ol>
-
     </nav>
     <section id="0.0">
       <h2><a href="#0.0">Part 0: Using this document</a></h2>
@@ -59,7 +52,7 @@
         </p>
         <p id="0.2-act"></p>
         <script>
-                    console.log("=========== 0.2 ===========")
+          console.log("=========== 0.2 ===========");
 
           const NAME = ""; // Put your name here
           document.getElementById("0.2-act").textContent = "My name is " + NAME;
@@ -76,7 +69,7 @@
           your name. Expand it, and find the "textContent" property!
         </p>
         <script>
-          console.log("=========== 0.3 ===========")
+          console.log("=========== 0.3 ===========");
 
           console.log(document.getElementById("0.2-act"));
         </script>
@@ -99,7 +92,8 @@
         <p>
           Let's get started by viewing a node! Below in the javascript, we have
           a list of nodes. For each node, display its name, type, value, text
-          content, and attributes. Console.log to see the data in the developer console, and then click around and explore the value you just logged!
+          content, and attributes. Console.log to see the data in the developer
+          console, and then click around and explore the value you just logged!
         </p>
         <p>
           Hint: Iterating through attributes cannot be done like a normal array
@@ -124,7 +118,7 @@
           </script>
         </article>
         <script>
-          console.log("=========== 1.2 ===========")
+          console.log("=========== 1.2 ===========");
 
           elements = document.getElementById("1.2-act").childNodes;
           // Your code here
@@ -137,13 +131,17 @@
       <article id="2.1">
         <h3><a href="#2.1">2.1 - Introduction</a></h3>
         <p>
-          Let's now talk about navigating across nodes. Once we have a node, we can move around - visit it's siblings (think items in a list), visit it's children (nested items), or visit its parents.
+          Let's now talk about navigating across nodes. Once we have a node, we
+          can move around - visit it's siblings (think items in a list), visit
+          it's children (nested items), or visit its parents.
         </p>
       </article>
       <article id="2.2">
         <h3><a href="#2.2">2.2 - Navigation between siblings</a></h3>
         <p>
-          Let's navigate the nodes! Starting from the first element, access the last element using the nextSibling and previousSibling properties. Console.log each element's text value.
+          Let's navigate the nodes! Starting from the first element, access the
+          last element using the nextSibling and previousSibling properties.
+          Console.log each element's text value.
         </p>
         <article id="2.2-act">
           <ol>
@@ -154,8 +152,8 @@
             <li>5</li>
           </ol>
           <script>
-            console.log("=========== 2.2 ===========")
-            const firstElement = document.getElementById("2.2-act-1")
+            console.log("=========== 2.2 ===========");
+            const firstElement = document.getElementById("2.2-act-1");
             // Access the last element using the nextSibling property
           </script>
         </article>
@@ -163,7 +161,9 @@
       <article id="2.3">
         <h3><a href="#2.3">2.3 - Navigation between parent/child</a></h3>
         <p>
-          Now, use the parentNode property to access the parent, log this element, then use the firstChild and lastChild properties to access the first and last list items. 
+          Now, use the parentNode property to access the parent, log this
+          element, then use the firstChild and lastChild properties to access
+          the first and last list items.
         </p>
         <article>
           <ol>
@@ -174,70 +174,78 @@
             <li>5</li>
           </ol>
           <script>
-            console.log("=========== 2.3 ===========")
+            console.log("=========== 2.3 ===========");
 
-            const middleElement = document.getElementById("2.3-act")
+            const middleElement = document.getElementById("2.3-act");
             // Access the last element using the nextSibling property
           </script>
         </article>
       </article>
     </section>
 
-
-
     <section id="3.0">
       <h2><a href="#3.0">Part 3: Node Manipulation</a></h2>
       <article id="3.1">
         <h3><a href="#3.1">3.1 - Introduction</a></h3>
-        <p>
-          We can navigate nodes, now let's modify them!
-        </p>
+        <p>We can navigate nodes, now let's modify them!</p>
       </article>
       <article id="3.2">
         <h3><a href="#3.2">3.2 - Modification</a></h3>
         <p>
-          Many properties of elements can be edited by simply assigning values to them! For example, we can edit HTML by assigning to innerHTML, change styles by assigning to the style property, edit the text, and more!
-          Edit the below paragraph so that it reads "ACM Cyber is the best!" Also, remove the ugly U$C red color by setting the style to an empty string. Bonus points to read the contents of the text, and edit it using javascript string find and replace functions.
+          Many properties of elements can be edited by simply assigning values
+          to them! For example, we can edit HTML by assigning to innerHTML,
+          change styles by assigning to the style property, edit the text, and
+          more! Edit the below paragraph so that it reads "ACM Cyber is the
+          best!" Also, remove the ugly U$C red color by setting the style to an
+          empty string. Bonus points to read the contents of the text, and edit
+          it using javascript string find and replace functions.
         </p>
         <article>
           <p id="3.2-act" style="color: red">ACM Cyber is the worst!</p>
           <script>
-            console.log("=========== 3.2 ===========")
-            const worstParagraph = document.getElementById("3.2-act")
+            console.log("=========== 3.2 ===========");
+            const worstParagraph = document.getElementById("3.2-act");
           </script>
         </article>
       </article>
       <article id="3.3">
         <h3><a href="#3.3">3.3 - Deletion</a></h3>
         <p>
-          Deleting is quite simple: either run parentNode.removeChild(childNode) or just myNode.remove()! Delete one of the articles from the below list using javascript!
+          Deleting is quite simple: either run parentNode.removeChild(childNode)
+          or just myNode.remove()! Delete one of the articles from the below
+          list using javascript!
         </p>
         <article>
           <ul id="3.3-act">
             <li>L.A. fires: UCLA campus updates and resources</li>
             <li>How you can help those impacted by the wildfires</li>
-            <li>60 years after Martin Luther King Jr.’s speech at UCLA, his legacy lives on in Westwood</li>
+            <li>
+              60 years after Martin Luther King Jr.’s speech at UCLA, his legacy
+              lives on in Westwood
+            </li>
             <li>UCLA experts: Wildfires</li>
           </ul>
           <script>
-            console.log("=========== 3.3 ===========")
+            console.log("=========== 3.3 ===========");
 
-            const listElement = document.getElementById("3.3-act")
+            const listElement = document.getElementById("3.3-act");
             // Note that you will need to access the child element first!
           </script>
         </article>
       </article>
     </section>
 
-
     <section id="4.0">
       <h2><a href="#4.0">Part 4: Nuke the site</a></h2>
-      <p>Let's nuke this site! Using your newfound knowledge, edit the below script and replace all text on this site with whatever you want, and delete any element containing the word "UCLA"!</p>
+      <p>
+        Let's nuke this site! Using your newfound knowledge, edit the below
+        script and replace all text on this site with whatever you want, and
+        delete any element containing the word "UCLA"!
+      </p>
     </section>
 
     <footer>
       <p>Created by Alec Machlis for a UCLA ACM Cyber Lab, 2025</p>
     </footer>
-
   </body>
 </html>
