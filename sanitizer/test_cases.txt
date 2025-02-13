@@ -1,2 +1,7 @@
 <script>alert(1)</script>
-<img src=x onerror=alert(1)>
+<img src=x onerror=alert(2)>
+<body> <p>Allowed</p> </body> 
+<p>Allow me</p>
+<img src='https://lac.tf/_next/static/media/LongLogoWavingTransparentBig.3127a039.gif?imwidth=2048' width=100 />
+<h2>allow me as well</h2>
+<p style="color: red;">I should be red</p>

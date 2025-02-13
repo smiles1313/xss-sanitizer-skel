@@ -54,7 +54,7 @@
         <script>
           console.log("=========== 0.2 ===========");
 
-          const NAME = ""; // Put your name here
+          const NAME = "random"; // Put your name here
           document.getElementById("0.2-act").textContent = "My name is " + NAME;
         </script>
       </article>
@@ -71,7 +71,7 @@
         <script>
           console.log("=========== 0.3 ===========");
 
-          console.log(document.getElementById("0.2-act"));
+          console.log([document.getElementById("0.2-act")]);
         </script>
       </article>
     </section>
@@ -121,7 +121,31 @@
           console.log("=========== 1.2 ===========");
 
           elements = document.getElementById("1.2-act").childNodes;
-          // Your code here
+          // Your code here - display each nodes' name, type, value, text content, and attributes
+          
+          /*
+          for (const ele of elements){
+            console.log("Node name: " + ele.nodeName);
+            console.log("Node type: " + ele.nodeType);
+            console.log("Node value: " + ele.nodeValue);
+            console.log("Text Content: " + ele.textContent);
+
+            if(ele.nodeName != "#text"){
+              if (ele.hasAttributes()) 
+              {
+                let output = "Attributes of first paragraph:\n";
+                for (const attr of ele.attributes) {
+                  output += `${attr.name} -> ${attr.value}\n`;
+                }
+                console.log(output);
+              } 
+              else {
+                console.log("No attributes");
+               }
+            }
+          }
+          */
+
         </script>
       </article>
     </section>
@@ -155,6 +179,15 @@
             console.log("=========== 2.2 ===========");
             const firstElement = document.getElementById("2.2-act-1");
             // Access the last element using the nextSibling property
+
+            /*
+            element = firstElement;
+            while (element.nextSibling) {
+              element = element.nextSibling;
+              console.log(element.textContent);
+            }
+            */
+
           </script>
         </article>
       </article>
@@ -177,7 +210,15 @@
             console.log("=========== 2.3 ===========");
 
             const middleElement = document.getElementById("2.3-act");
-            // Access the last element using the nextSibling property
+            // Access the parent - log it. Then access the first and last list items.
+
+            /*
+            parent = middleElement.parentNode;
+            console.log("Parent node:" , parent);
+            console.log("First item:" , parent.firstChild);
+            console.log("Last item:" , parent.lastChild);
+            */
+
           </script>
         </article>
       </article>
@@ -205,6 +246,20 @@
           <script>
             console.log("=========== 3.2 ===========");
             const worstParagraph = document.getElementById("3.2-act");
+            // Edit the text
+
+            /*
+            if (worstParagraph.hasAttributes()) {
+              worstParagraph.setAttribute("style", "");
+            }
+            //worstParagraph.innerHTML = "ACM Cyber is the BEST!";
+            oldText = worstParagraph.textContent;
+            newText = "ACM Cyber is the BEST!";
+            newStr = oldText.replace(oldText, newText);
+            worstParagraph.textContent = newStr;
+            */
+           
+
           </script>
         </article>
       </article>

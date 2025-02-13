@@ -1,5 +1,6 @@
 const htmlRender = document.getElementById("rendered");
 const c = await fetch("test_cases.txt")
+<<<<<<< Updated upstream
 let c_text = await c.text()
 import { Sanitizer } from './sanitize.js'
 
@@ -21,3 +22,12 @@ window.addEventListener(
     false,
   );
   
+=======
+const c_text = await c.text()
+
+
+const cleaned = Sanitizer.sanitize(c_text);
+
+console.log(cleaned)
+htmlRender.setAttribute("srcdoc", cleaned);
+>>>>>>> Stashed changes
