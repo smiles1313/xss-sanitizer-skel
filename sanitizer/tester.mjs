@@ -3,9 +3,9 @@ const c = await fetch("test_cases.txt")
 let c_text = await c.text()
 import { Sanitizer } from './sanitize.js'
 
-const cleaned = Sanitizer.sanitize(c_text);
+let cleaned = Sanitizer.sanitize(c_text);
 
-c_text = "<script>function alert(text) { parent.postMessage('test') }</script>" + c_text
+cleaned = "<script>function alert(text) { parent.postMessage('test') }</script>" + cleaned
 
 console.log(cleaned)
 htmlRender.setAttribute("srcdoc", cleaned);
@@ -13,9 +13,6 @@ htmlRender.setAttribute("srcdoc", cleaned);
 window.addEventListener(
     "message",
     (event) => {
-        if (event.origin !== window.location.origin) {
-            return;
-        }
         console.log(event)
     },
     false,
