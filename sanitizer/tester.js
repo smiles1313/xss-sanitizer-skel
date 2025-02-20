@@ -25,7 +25,6 @@ export class Tester {
     // TODO: create an element to display the test case result
     // Use the payload and cleaned string variables to display the string pre- and post- sanitization
 
-
     // TODO: Append test case result div with casesDiv.appendChild()
     // casesDiv.appendChild(testCaseElement);
     this.displayLookup.set(id, outer);
